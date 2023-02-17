@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> SIGNUP </title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Fabs.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   </head>
+   <style>
+
+
+
+
+
+
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+	background-image: url(https://wallpapers.com/images/hd/futuristic-technology-logo-5it876gax4xasbah.jpg);
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background-size: cover;
+    background-repeat: no-repeat;
+	box-shadow: 5px 5px 2px 2px #000000;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 58px 49px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  margin-bottom: -145px;
+}
+.container .title{
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  margin-left: 38%;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 145px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7100e6, #9b50b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  margin-bottom: -5px;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin: 5px;
+}
+.user-details .input-box input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+  padding-left: 40px;
+  border: 2px solid #ccc;
+  border-bottom-width: 4px;
+  transition: all 2.0s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ 
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ 
+ form .button{
+   height: 55px;
+   margin: 35px;
+   width: 275px;
+   margin-left:28%;
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 1.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container1 {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 25%;
+	width: 25%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: blue;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid blue;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: blue;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: blue;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.5s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: blue;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
+
+
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: blue;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 5rem;
+	}
+}
+
+
+
+
+
+
+	
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	} 
+}
+/* End  Media Query For Desktop */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn{
+	width:150px;
+	height:55px;
+	border-radius:35px;
+	cursor:pointer;
+	border:none;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:bold;
+	box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+	transition: all 0.5 ease;
+  
+  }
+
+  .btn:hover{
+	background: #2ceae5;
+	transform:translateY(-5px);
+	color:#fff;
+	box-shadow: 0px 10px 25px rgba(85, 223, 229, 0.445);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .popup{
+	width:400px;
+	background: #fff;
+	border-radius: 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	text-align: center;
+	padding:0 30px 30px;
+	color: #333;
+	visibility: hidden;
+	transition: transform top -3.7s;
+  }
+  
+  .open-popup{
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .popup img{
+	width: 100px;
+	margin-top: -50px;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 00, 0.2);
+  }
+  .popup h2{
+	font-size:38px;
+	font-weight: 500;
+	margin: 30px 0 10px;
+  
+  }
+  .popup button{
+	width: 30%;
+	margin-top: 50px;
+	padding: 10px 0;
+	background: #6fd649;
+	color: #fff;
+	border: 0;
+	font-size: 18px;
+	border-radius: 4px;
+	box-shadow: 0 5px 5px rgba(0, 0, ,0 0.2);
+  }
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+   </style>
+<body>
+
+    <section id="header">
+        <div class="header container1">
+          <div class="nav-bar">
+            <div class="brand">
+              
+                <h1><span>F</span>ABS <span>TECH</span>NOLOGIES</h1>
+              </a>
+            </div>
+            <div class="nav-list">
+              <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+              <ul>
+                <li><a href="{% url 'home' %}" data-after="">Home</a></li>
+                      <li><a href="{% url 'contactus' %}" >Contact us </a></li>
+                <li><a href="{% url 'sign_up' %}" data-after="signup">Sign Up</a></li>
+                <li><a href="{% url 'loginpage' %}" data-after="signin">Sign In</a></li>
+    
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+	  <br>
+	  <br>
+	  <br>
+
+
+
+
+
+
+
+    
+  <div class="container">
+    <div class="title">SIGN IN</div>
+    <div class="content">
+      <form action="{% url 'Employ_login' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"> <b> User Name </b></span>
+            <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+          </div>
+		
+          <div class="input-box">
+            <span class="details"> <b> Password </b> </span>
+            <input type="password" id="name" name="password" placeholder="Enter your password" required>
+          </div>
+          <center>
+           <a href="#" style="color:rgb(11, 2, 2) ;"><b>forgot Password?</b></a>
+          </center>
+         
+        </div>
+        
+
+        
+        <button class="button">
+			<input type="submit" id="button" value="Sign In" onclick="openPopup()">
+		</button>
+        <div class="popup" id="popup">
+			<img src="{% static 'images/tick.png' %}"> <br>
+			<h2> Successfully Loggin!!!.. </h2>
+			<button type="button" onclick="closePopup()">  Ok  </button>
+		</div>
+
+         
+        
+        
+
+
+
+      </form>
+    </div>
+  </div>
+<script>
+	let popup = document.getElementById("popup");
+
+	function openPopup(){
+	  popup.classList.add("open-popup");
+	}
+	function closePopup(){
+	  popup.classList.remove("open-popup");
+	}
+  
+  </script>
+  
+
+
+</body>
+</html>

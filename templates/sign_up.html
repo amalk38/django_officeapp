@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> SIGNUP </title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Fabs.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   </head>
+   <style>
+
+
+
+
+
+
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+	background-image: url(https://wallpapers.com/images/hd/futuristic-technology-logo-5it876gax4xasbah.jpg);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background-size: cover;
+    background-repeat: no-repeat;
+	box-shadow: 5px 5px 2px 2px #000000;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  margin-bottom: -145px;
+  opacity"25%;
+}
+.container .title{
+  font-size: 45px;
+  font-weight: 500;
+  position: relative;
+  margin-left: 35%;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 170px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #7100e6, #9b50b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  margin-bottom: -5px;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 4px;
+  transition: all 1.0s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ 
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ 
+ form .button{
+   height: 55px;
+   margin: 35px;
+   width: 275px;
+   margin-left:28%;
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container1 {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 25%;
+	width: 25%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: blue;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid blue;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: blue;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: blue;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.5s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: blue;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
+
+
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: blue;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 5rem;
+	}
+}
+
+
+
+
+
+
+	
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	} 
+}
+/* End  Media Query For Desktop */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn{
+	width:150px;
+	height:55px;
+	border-radius:35px;
+	cursor:pointer;
+	border:none;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:bold;
+	box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+	transition: all 0.5 ease;
+  
+  }
+
+  .btn:hover{
+	background: #2ceae5;
+	transform:translateY(-5px);
+	color:#fff;
+	box-shadow: 0px 10px 25px rgba(85, 223, 229, 0.445);
+  }
+  
+
+
+
+
+
+
+   </style>
+<body>
+
+    <section id="header">
+        <div class="header container1">
+          <div class="nav-bar">
+            <div class="brand">
+              
+                <h1><span>F</span>ABS <span>TECH</span>NOLOGIES</h1>
+              </a>
+            </div>
+            <div class="nav-list">
+              <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+              <ul>
+                <li><a href="{% url 'home' %}" data-after="">Home</a></li>
+                      <li><a href="{% url 'contactus' %}" >Contact us </a></li>
+                <li><a href="{% url 'sign_up' %}" data-after="signup">Sign Up</a></li>
+                <li><a href="{% url 'loginpage' %}" data-after="signin">Sign In</a></li>
+    
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+	  <br>
+	  <br>
+	  <br>
+
+
+
+
+
+
+
+    
+  <div class="container">
+    <div class="title">SIGN UP</div>
+    <div class="content">
+      <form action="{% url 'add_employ_details' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            {% comment %} <input type="text" id="fname" name="fname" placeholder="Enter your first name" required> {% endcomment %}
+			<input type="text" id="fname" name="fname" placeholder="Enter your first name" pattern="[A-Za-z]{1,32}" required>
+			<small id="emailHelp" class="form-text text-muted" > First Name starts with Capital Letter. </small>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+			<small id="emailHelp" class="form-text text-muted" > We'll never share your email with anyone else. </small>
+          </div>
+          <div class="input-box">
+            <span class="details">Contact Number</span>
+            <input type="number" id="cnumber" name="cnumber" placeholder="Enter your number" required>
+			<small id="emailHelp" class="form-text text-muted" > Make sure your Contact Number Contains 10 Digits  </small>
+          </div>
+
+		  <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="date"  name="date">
+          </div>
+
+		  <div class="input-box">
+            <span class="details">Age</span>
+            <input type="number"  name="age" placeholder="Enter your age" required>
+          </div>
+
+		  <div class="input-box">
+            <span class="details">Department</span>
+            <select class="form-control" name="select" id="qwerty">
+                {% for i in departments %}
+      
+                <option value="{{ i.id }}">{{ i.Department_Name }}</option>
+      
+                {% endfor %}
+            </select><br>
+          </div>
+
+		  <div class="input-box">
+            <span class="details">Upload Image </span>
+            <input type="file" name="img" accept="image/">
+          </div>
+
+
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" name="password"  onclick="showpassw()" placeholder="Enter your password" required>
+			<small id="emailHelp" class="form-text text-muted" > Password must contain atleast 8 characters and it must incluse capital letters small letters and numbers  </small>
+
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="cpassword" name="cpassword" onclick="showpassw()" placeholder="Confirm your password" required>
+			<small id="emailHelp" class="form-text text-muted" > Password must contain atleast 8 characters and it must incluse capital letters small letters and numbers  </small>
+
+          </div>
+        </div>
+        
+
+        
+        <button class="button">
+			<input type="submit" value="Sign Up">
+		</button>
+      </form>
+    </div>
+  </div>
+
+<script>
+
+
+	function showpassw() {
+		var x = document.getElementById("password");
+		if (x.type === "password") {
+			  x.type = "text";
+			  var fname = document.getElementById("fname").value;
+			  var phone = document.getElementById("cnumber").value;
+				
+				  p=fname.slice(0,2).toUpperCase()
+				  q=fname.slice(3,5)
+				  n=phone.slice(3,9)
+				  pass1=p+"#"+n+q+"ak"
+				document.getElementById("password").value =pass1;
+
+
+
+		} else {
+			  x.type = "password";
+		}
+		var y = document.getElementById("text");
+		if (y.type === "password") {
+			  y.type = "text";
+		} else {
+			  y.type = "password";
+		}
+		}
+	
+
+
+
+</script>
+
+</body>
+</html>

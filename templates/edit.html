@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Update profile </title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Fabs.png' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+
+   </head>
+   <style>
+
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+	background-image: url(https://wallpapers.com/images/featured/w65hwkhmusntb0j9.jpg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 18px;
+	background-size: cover;
+    background-repeat: fixed;
+	
+}
+
+
+ 
+ 
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+  
+  }
+ 
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container1 {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: 25%;
+	width: 25%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: blue;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid blue;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: blue;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: blue;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.5s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: blue;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
+
+
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: blue;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 5rem;
+	}
+}
+
+
+
+
+
+
+	
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.7rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#services .service-bottom .service-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	} 
+}
+/* End  Media Query For Desktop */
+
+
+
+.headdd{
+	font-family: "Audiowide", sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
+
+
+
+
+.f_style{
+    margin-top: 85px;
+    box-shadow: 5px 1px 15px 5px #00053D;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    width:900px;
+    height:820px;
+    border-radius:15px;
+    }
+  
+
+    input[type=text],input[type=email],input[type=number],input[type=date]{
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 10px;
+        box-shadow: #04020e;
+        border: none;
+        width: 300px;
+       
+        
+      }
+      
+        label{
+          color: rgb(6, 5, 5);
+          float: inline-start;
+          font-size: 16px;
+        }
+      
+      a{
+          text-decoration: none;
+      }
+
+
+
+
+      
+.update{
+    font-size:38px;
+    color:black;
+}
+
+
+
+
+.btn{
+    background-color:#00053D;
+    color: white;
+    width:145px;
+    height:47px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color:blue;
+}
+
+
+
+
+
+
+
+
+   </style>
+<body>
+
+    <section id="header">
+        <div class="header container1">
+          <div class="nav-bar">
+            <div class="brand">
+              
+                <h1 class="headdd"><span>F</span>ABS <span>TECH</span>NOLOGIES</h1>
+              </a>
+            </div>
+            <div class="nav-list">
+              <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+              <ul>
+                <li><a href="{% url 'user_home' %}" >Home</a></li>
+                <li><a href="{% url 'view_profile'  %}">show profile</a></li>
+                <li><a href="{% url 'edit_profile'  %}">edit profile</a></li>
+                <li><a href="{% url 'deletepage'  %}">delete profile</a></li>
+                <li><a href="{% url 'logout' %}"> logout </a></li>
+    
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  <center>
+    <div class="f_style"> <br>
+<h1 class="update">UPDATE PROFILE </h1> <br>
+<form method="post" action="{% url 'edit_student_details' %}" style="text-align: center;" enctype="multipart/form-data">
+    {% csrf_token %}
+
+  
+    <label for="name" style="padding-right: 8px;">First Name : &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+   <input type="text" id="name" name="fname" value="{{emp.fname}}" ><br>
+
+   <label for="name"> Last Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+   <input type="text" id="name" name="lname" value="{{emp.lname}}" ><br>
+
+   <label for="name"> User Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+   <input type="text" id="name" name="name" value="{{emp.username}}" ><br>
+
+    <label>Date Of Birth : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="date" name="date" value="{{emp.dob}}"><br>
+
+    <label for="name">Age : &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="number" id="name" name="age" value="{{emp.Employ_Age}}"><br>
+
+    <label for="name">Email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="email" id="name" name="email" value="{{emp.email}}"><br>
+    
+    <label for="name">Contact Number :</label>
+    <input type="number" id="name" name="cnumber" value="{{emp.phone}}"><br>
+
+    <label for="name">Department </label>
+    <select class="form-select" name="select" id="qwerty">
+      {% for i in Departments %}
+      {% if i.id != emp.Department.id %}
+      <option value="{{ i.id }}">{{ i.Department_Name }}</option>
+      {% endif %}
+      {% endfor %}
+      <option value="{{ emp.Department.id }}" selected>{{ emp.Department.Department_Name }}</option>
+
+     
+
+
+
+    </select><br><br> <br>
+    <label >Image</label>
+           {% if emp.img %}
+
+                <img src="{{ p.img.url}}" width="30px"><br><br>
+                
+            {% else %}
+            <img src="{% static 'image/default.png' %}" width="30px">
+                
+                 {% endif %}
+    
+    <label>Change image</label>
+    <input type="file" name="img" accept="image/"><br> <br> 
+    
+    
+    <input type="submit" class="btn" value="Update" >
+    
+    
+    <input type=button class="btn" value="Previous Page" onClick="javascript:history.go(-1);">
+</form>
+</div>
+</center>
+
+
+
+
+
+
+
+  
+
+
+</body>
+</html>

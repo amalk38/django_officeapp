@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Fabs.png' %}">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body
+      {
+        background-image: url(https://wallpaperaccess.com/full/679895.jpg);
+        background-size: cover;
+        height: 700px;
+        background-repeat: no-repeat;
+        box-shadow: 5px 5px 2px 2px #000000;
+      }
+     
+     .navbar{
+      background-color: transparent;
+    }
+      
+   
+      li{
+        color: cyan;
+        font-size: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+        padding-top: 20px;
+        
+      }
+
+
+     
+
+
+      h1 { 
+        display: block;
+        font-size: 6em;
+        margin-top: 12%;
+        margin-bottom: 0%;
+        margin-left: 31%;
+        margin-right: 29%;
+        font-weight: bold;
+        color: blue;
+        background: white;
+        opacity:75%;
+      }
+    
+    
+
+
+
+
+
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+            <nav class="navbar sticky-top navbar-expand-lg ">
+                <div class="container-fluid">
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="{% url 'admin_home' %}"><img src="{% static 'images/Fabs.png' %}" width="100px" style="border-radius: 20px;box-shadow: 5px 5px 2px 2px #00053D;"></a>
+                    
+                  <ul class="nav  nav-pills text-white">
+                    <li class="nav-item ">
+                      <a class="nav-link active text-white" href="#" style="margin-left: 50px;">HOME </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'DepartmentPage' %}">ADD DEPARTMENTS</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'show_employ_details' %}">SHOW EMPLOYEE</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'leave_list_admin' %}">EMPLOYEE LEAVE REQUESTS</a>
+                    </li>
+
+                     
+
+
+                    </ul>
+
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="nav-item" style="padding-right: 20px;"><a class="nav-link text-white" href="{% url 'logout' %}"><span class="glyphicon glyphicon-user" style="padding-right: 5px;"></span> LOG OUT</a></li>
+                    </ul>
+                  </div>
+                </nav> 
+          </div>
+
+        <h1> FABS TECHNOLOGIES </h1>
+        </div>
+
+      </div>
+
+
+</body>
+</html>
